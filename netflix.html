@@ -31,18 +31,23 @@
       flex:1;
       
       background-color: rgb(1, 1, 12);
+      align-items: center;
+      
       
     }
     .right{
       display:flex;
      
       background-color: rgb(7, 2, 2);
+      align-items: center;
+      justify-content: center;
       
 
     }
     .logo{
       width: 290px;
       height: 120px;
+      margin-top: 20px;
     }
     .home{
       font-size: 25px;
@@ -150,7 +155,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
       background-color: black;
-      column-gap: 20px;
+      column-gap: 15px;
       row-gap: 10px;
       position: relative;
      
@@ -165,8 +170,8 @@
     
     
     .mov1{
-      width: 250px;
-      height: 350px;
+      width: 280px;
+      height: 380px;
       transition: 0.25s;
       
     
@@ -176,9 +181,9 @@
 
 
     .mov1:hover{
-      opacity: 9;
-      width: 265px;
-      height:365px;
+      opacity: 0.8;
+      width: 290px;
+      height:387px;
       cursor: pointer;
   
  
@@ -192,8 +197,10 @@
       position: relative;
     
     }
-    .button:active{
+    .button:active .nn{
+      opacity: 1;
       opacity: 0.9;
+      
     }
     .button .button-tooltin{
       color: white;
@@ -209,6 +216,25 @@
     .button:hover .button-tooltin{
       opacity: 1;
     }
+    .nn{
+    
+      height:40px ;
+      width: 400px;
+      display: flex;
+      margin-top: 30px;
+      border-radius: 5px;
+      
+      padding-top: 5px;
+      border: none;
+      margin-right: 10px;
+      cursor: pointer;
+
+    }
+    .nn::placeholder{
+      font-size: 20px;
+      padding-left: 10px;
+     
+    }
     .notification-tool{
       position: relative;
     }
@@ -216,12 +242,13 @@
       position: absolute;
       color: white;
       padding: 3px;
-      bottom: 0;
+      bottom: -30px;
       right:0;
       background-color: grey;
       opacity: 0;
       pointer-events: none;
       transition: 0.20s;
+      
 
     }
     .notification-tool:hover .notification-tooltin{
@@ -244,7 +271,7 @@
     .profile-tool .profile-tooltin{
       color: white;
       position: absolute;
-      bottom: -10px;
+      bottom: -40px;
       right: 10px;
       background-color: gray;
       padding: 3px;
@@ -293,12 +320,15 @@
     
     
     <div class="right">
-
+      <input class="nn"  type="search" placeholder="Search">
       <button class="button">
         <img class="ser" src="thumbnails/1111.jpg">
         <div class="button-tooltin">
           Search
         </div>
+       
+          
+        
       </button>
       <p class="kids">
         KIDS
