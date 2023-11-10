@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .body{
+      padding-top: 100px;
+      padding-left: 45px;
+      background-color: black;
+      padding-right: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .header{
+      display: flex;
+      flex-direction: row;
+      height: 120px;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      
+      
+    }
+    .left{
+      display:flex;
+      flex:1;
+      
+      background-color: rgb(1, 1, 12);
+      
+    }
+    .right{
+      display:flex;
+     
+      background-color: rgb(7, 2, 2);
+      
+
+    }
+    .logo{
+      width: 290px;
+      height: 120px;
+    }
+    .home{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .series{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+        Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .movies{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+      Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .originals{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+      Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .recently{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+        Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .my{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+      Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .ser{
+      width: 50px;
+      height: 50px;
+      
+    }
+    
+    .kids{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+      Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .dvd{
+      font-size: 25px;
+      margin-top: 45px;
+      margin-left: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', 
+      Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .notifi{
+      margin-top: 25px;
+      width: 80px;
+      height: 60px;
+      margin-left: 20px;
+
+    }
+    .pro2{
+      width: 60px;
+      height: 60px;
+      margin-top: 30px;
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+    .title{
+      display:flex;
+      flex-direction: row;
+      height: 50px;
+      background-color: black;
+      margin-top: 10pxpx;
+    }
+    .trend{
+      font-size: 20px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+      Verdana, sans-serif;
+      color: white;
+      
+    }
+    .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+      background-color: black;
+      column-gap: 20px;
+      row-gap: 10px;
+      position: relative;
+     
+      
+      
+
+    
+    }
+   
+      
+  
+    
+    
+    .mov1{
+      width: 250px;
+      height: 350px;
+      transition: 0.25s;
+      
+    
+      
+    }
+    
+
+
+    .mov1:hover{
+      opacity: 9;
+      width: 265px;
+      height:365px;
+      cursor: pointer;
+  
+ 
+    }
+    .button{
+      width: 100px;
+      height: 70px;
+      margin-top: 30px;
+      background-color: rgb(10, 3, 3);
+      border: none;
+      position: relative;
+    
+    }
+    .button:active{
+      opacity: 0.9;
+    }
+    .button .button-tooltin{
+      color: white;
+      position: absolute;
+      background-color: rgb(158, 153, 153);
+      padding: 3px 3px 3px 3px;
+      bottom: -30px;
+      left:25px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.20s;
+    }
+    .button:hover .button-tooltin{
+      opacity: 1;
+    }
+    .notification-tool{
+      position: relative;
+    }
+    .notification-tool .notification-tooltin{
+      position: absolute;
+      color: white;
+      padding: 3px;
+      bottom: 0;
+      right:0;
+      background-color: grey;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.20s;
+
+    }
+    .notification-tool:hover .notification-tooltin{
+      opacity: 1;
+    }
+    .notification-tool .notification-count{
+      color: white;
+      font-size: 16px;
+      background-color: red;
+      position: absolute;
+      width: 15px;
+      padding-left: 5px;
+      border-radius: 50px;
+      top:30px;
+      right: 15px;
+    }
+    .profile-tool{
+      position: relative;
+    }
+    .profile-tool .profile-tooltin{
+      color: white;
+      position: absolute;
+      bottom: -10px;
+      right: 10px;
+      background-color: gray;
+      padding: 3px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.20s;
+    }
+    .profile-tool:hover .profile-tooltin{
+      opacity: 1;
+    }
+   
+   
+    
+
+    
+      
+    
+
+  </style>
+</head>
+<body class="body">
+  <div class="header">
+    <div class="left">
+      <img class="logo" src="thumbnails/netflix logo.jpg">
+      <p class="home">
+        Home
+      </p>
+      <p class="series">
+        series
+      </p>
+      <p class="movies">
+        Movies
+      </p>
+      <p class="originals">
+        Originals
+      </p>
+      <p class="recently">
+        Recently Added
+      </p>
+      <p class="my">
+        My List
+      </p>
+
+
+    </div>
+    
+    
+    <div class="right">
+
+      <button class="button">
+        <img class="ser" src="thumbnails/1111.jpg">
+        <div class="button-tooltin">
+          Search
+        </div>
+      </button>
+      <p class="kids">
+        KIDS
+      </p>
+      <P class="dvd">
+        DVD
+      </P>
+      <div class="notification-tool">
+        <img class="notifi" src="thumbnails/1144.jpg">
+        <div class="notification-count">5</div>
+        <div class="notification-tooltin">Notifications</div>
+      </div>
+      <div  class="profile-tool"> 
+        <img class="pro2" src="thumbnails/pro.jpg">
+        <div class="profile-tooltin">
+          Profile
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="title">
+      <p class="trend">
+        New Release
+      </p>
+    
+    </div>
+    <div class="container">
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov5.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov2.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov3.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov4.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov6.png">
+      </div>
+  
+  
+      
+  
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov8.png">
+      </div>
+  
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov9.png">
+      </div>
+  
+  
+  
+      
+    </div>
+    
+  </div>
+
+
+  <div>
+    <div class="title">
+      <p class="trend">
+        Top Trending
+      </p>
+    
+    </div>
+    <div class="container">
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov10.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov11.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov12.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov13.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov14.png">
+      </div>
+  
+  
+      
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov16.png">
+      </div>
+  
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov17.png">
+      </div>
+  
+  
+  
+      
+    </div>
+    
+  </div>
+  <div>
+    <div class="title">
+      <p class="trend">
+        Made in India
+      </p>
+    
+    </div>
+    <div class="container">
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov18.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov19.png">
+      </div>
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov20.png">
+      </div>
+  
+      
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov22.png">
+      </div>
+  
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov23.png">
+      </div>
+  
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov24.png">
+      </div>
+  
+  
+      <div class="movie">
+        <img class="mov1" src="thumbnails/mov25.png">
+      </div>
+  
+  
+  
+      
+    </div>
+    
+  </div>
+  
+</body>
+</html>

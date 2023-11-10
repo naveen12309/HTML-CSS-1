@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <style>
+    body{
+      height: 100vh;
+      width: 100vh;
+     
+      display: grid;
+      place-items: center;
+      margin: auto;
+      align-items: center;
+
+    }
+    
+    
+    .main{
+      max-width: 600px;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      background-color: antiquewhite;
+      box-shadow: 0px 0px 1px 1px rgb(199, 189, 189);
+      margin: auto;
+      
+      
+      
+      
+      
+      
+    }
+    .header{  
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border-bottom-width:10px ;
+      border-bottom-style:solid ;
+      border-bottom-color:rgb(247, 247, 8) ;
+      background-color: rgb(0, 149, 255);
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      border-top-right-radius:10px  ;
+      border-top-left-radius:10px ;
+      margin-bottom: 40px;
+      
+      
+    }
+    .p1{
+      font-size: 25px;
+      color: white;
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+    .sub{
+      display: flex;
+      flex-direction: row;
+      column-gap: 90px;
+    }
+    .sub2{
+      display: flex;
+      flex-direction: row;
+      column-gap: 178px;
+    }
+    .sub3{
+      display: flex;
+      flex-direction: row;
+      column-gap: 215px;
+    }
+    .p2{
+      font-size: 25px;
+      margin-left: 20px;
+      font-style:normal;
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      vertical-align: top;
+      margin-top: 5px;
+    }
+    .enter{
+      width:300px;
+      height: 35px;
+      border-radius: 5px;
+      border-color: rgb(182, 175, 175);
+      border-style: solid;
+      border-width: 1px;
+      font-size: 20px;
+    }
+    .enter::placeholder{
+      font-size: 15px;
+      padding-left: 10px;
+      color: black;
+      
+    }
+    .buttonclass{
+      margin-top: 60px;
+      margin-left: 40px;
+    }
+    .button{
+      width: 500px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background-color: yellowgreen;
+      font-size: 20px;
+      color: aliceblue;
+      font-weight: bold;
+    }
+    .sub4{
+      margin-top: 50px;
+      display: flex;
+      column-gap: 45px;
+    }
+    .button:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .button:active{
+      opacity: 0.6;
+    }
+    .service{
+      margin-top: 50px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      
+      
+    }
+    .service_des{
+      font-size: 20px;
+      color: rgb(148, 146, 146);
+  
+    }
+    .service:hover{
+      text-decoration: underline;
+      color:  rgb(148, 146, 146);
+      opacity: 0.8;
+      cursor: pointer;
+      
+    }
+    .service:active{
+      text-decoration: underline;
+      color:  rgb(148, 146, 146);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body style="background-image: url('thumbnails/1111.jpg');">
+  
+  <div class="main">
+    <div class="header">
+      <p class="p1">
+        Temperature Converter
+      </p>
+
+    </div>
+    <div>
+      <div class="sub">
+        <p class="p2">
+          Temperature
+        </p>
+        <input  class=" enter" 
+         type="number"  placeholder="Enter">
+      </div>
+
+
+      <div class="sub2">
+        <p class="p2">
+          From
+        </p>
+        <input  class=" enter" 
+         type="number"  placeholder="Celsius (&deg; c)                           
+         
+           ">
+      </div>
+
+
+      <div class="sub3">
+        <p class="p2">
+          To
+        </p>
+        <input  class=" enter" 
+         type="number"  placeholder="Kelvin (K)                                    
+         
+    ">
+      </div>
+
+
+      <div class="buttonclass">
+        <button class="button">
+          Convert
+        </button>
+      </div>
+
+
+      <div class="sub4">
+        <p class="p2">
+          Converted_Value
+        </p>
+        <input  class=" enter" 
+         type="number"  placeholder="Value">
+      </div>
+
+      <div class="service">
+        <p class="service_des">
+          Service Description
+        </p>
+      </div>
+
+
+      
+
+      
+
+
+      
+
+    </div>
+
+  </div>
+  
+</body>
+</html>
